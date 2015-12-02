@@ -1,0 +1,45 @@
+header
+	position: absolute
+	top: 0
+	left: 0
+	height: 0
+	width: 100%
+	z-index: 10000
+	padding: 0
+	text-align: center
+	.unloaded &
+		opacity: 0
+
+	#main-logo
+		position: absolute
+		top: $edge-margin
+		left: $edge-margin
+		background-color: transparent
+
+		:focus
+			background-color: rgba(0,0,0,0)
+	
+		@include respond-to(desktops)
+			top: $edge-margin * 0.5
+			left: $edge-margin * 0.5
+		@include respond-to(laptops)
+			top: $edge-margin * 0.5
+			left: $edge-margin * 0.5
+			
+		svg
+			width: 150rem
+			@include respond-to(desktops)
+				width: 75rem
+			@include respond-to(laptops)
+				width: 75rem
+	
+	#hud
+		position: absolute
+		background-color: #0ff
+		color: #000
+		top: 0
+		left: 0
+		z-index: 1000000000000000
+		font-size: 30rem
+		padding: $edge-margin
+		display: none

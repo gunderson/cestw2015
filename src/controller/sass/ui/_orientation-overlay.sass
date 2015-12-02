@@ -1,0 +1,24 @@
+#orientation
+	.no-touch & 
+		h2.touch
+			display: none
+		h2.no-touch
+			display: block
+
+	.touch & 
+		h2.touch
+			display: block
+		h2.no-touch
+			display: none
+
+@media only screen and (orientation : landscape)
+	#orientation
+		//.touch 
+		display: none
+		z-index: -100
+
+@media only screen and (orientation : portrait) 
+	#orientation
+		//.touch 
+		display: block
+		z-index: 10000001

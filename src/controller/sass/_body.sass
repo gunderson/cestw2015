@@ -1,0 +1,45 @@
+
+
+html, body
+	width: 100%
+	height: 100%
+	margin: 0
+	padding: 0
+	font-family: $body-font-family
+	font-size: 1px
+	-webkit-font-smoothing: antialiased
+	background-color: rgba(0,0,0, 1)
+	overflow: hidden
+
+	@include respond-to(laptops)
+		font-size: 1px * $laptop-scale
+
+	@include respond-to(tablets)
+		font-size: 1px * $tablet-scale
+
+	@include respond-to(phones)
+		font-size: 1px * $phone-scale
+
+	@include respond-to(old-phones)
+		font-size: 1px * $old-phone-scale
+
+html
+
+body
+	height: calc(100% + 1px)
+
+
+a
+	color: $main-link-color
+
+@media (orientation:landscape) 
+    html.ipad 
+        position: -webkit-sticky;
+        top: 0
+        width: 100%
+        height: 672px !important
+    
+
+    
+
+

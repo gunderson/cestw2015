@@ -1,0 +1,41 @@
+{
+	"title": "Domino's DXP",
+	"description": "A first-of-its-kind, purpose-built pizza delivery vehicle, five years in the making.",
+	"keywords": "dominos, dxp, pizza, delivery, order, vote, experience, new car, vehicle",
+	"author": "Domino's",
+	"copyright": "copyright 2015, All Rights Reserved",
+	"viewport": "width=device-width, initial-scale=1, user-scalable=no",
+	"favicon": "favicon.png",
+	"url": "http://dominos-dxp.com",
+	"icons": {
+		"shortcutIcon16x16": "",
+		"shortcutIcon120x120": "",
+		"shortcutIcon200x200": "",
+		"appleTouchIcon": ""
+	},
+	"og": {
+		"title": "Domino's DXP",
+		"image": "assets/images/fb_share.jpg",
+		"description": "A first-of-its-kind, purpose-built pizza delivery vehicle, five years in the making."
+	},
+	"twitter": {
+		"title": "Domino's DXP",
+		"image": "assets/images/tw_share.jpg",
+		"description": "A first-of-its-kind, purpose-built pizza delivery vehicle, five years in the making."
+	},
+	"tumblr": {
+		"title": "Domino's DXP",
+		"image": "assets/images/tw_share.jpg",
+		"description": "A first-of-its-kind, purpose-built pizza delivery vehicle, five years in the making."
+	},
+	"google-plus": {
+		"title": "Domino's DXP",
+		"image": "assets/images/g+_share.jpg",
+		"description": "A first-of-its-kind, purpose-built pizza delivery vehicle, five years in the making."
+	},
+	"pinterest": {
+		"title": "Domino's DXP",
+		"image": "assets/images/g+_share.jpg",
+		"description": "A first-of-its-kind, purpose-built pizza delivery vehicle, five years in the making."
+	}
+}

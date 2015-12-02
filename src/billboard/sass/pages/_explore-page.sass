@@ -1,0 +1,135 @@
+#explore-page
+	background: url($cdn + "assets/images/explore-page/360BG_top.jpg")
+		background-position: 50% 0%
+		background-size: 100% auto
+		background-repeat: no-repeat
+	.content
+		overflow: hidden
+		text-align: center
+		.bottom
+			position: absolute
+			bottom: 0
+		.road
+			width: 100%
+		.sidewalk
+			width: 100%
+
+
+	.vignette
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transition: opacity 0.5s
+		-webkit-transition: opacity 0.5s
+		&.active
+			opacity: 1
+			
+	section
+		display: inline-block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 1000
+		width: 80%
+		height: 80%
+		margin: auto
+		pointer-events: none
+		opacity: 0
+		transition: opacity 0.5s
+		-webkit-transition: opacity 0.5s
+		&.active
+			opacity: 1
+
+		.content
+			background: transparent
+			display: block
+			position: absolute
+			top: 50em
+			left: 0
+			right: 0
+			margin: auto
+			width: 900rem
+			text-align: center
+			text-shadow: 0px 0px 8px rgba(0, 0, 0, 1)
+			
+			h1
+				width: 100%
+				font-size: 80rem
+				margin: 10rem 0 0 0;
+				color: #FFF
+				font-weight: normal
+				line-height: 80rem
+				text-transform: uppercase
+
+			p 
+
+				width: 100%
+				font-family:"Trade Gothic Cn"
+				font-weight: normal
+				font-size: 35rem
+				margin: 10rem auto 0
+				color: #FFF
+				line-height: 35rem
+				text-transform: uppercase
+				.touch &.touch
+					display: block
+				.touch &.no-touch
+					display: none
+				.no-touch &.touch
+					display: none
+				.no-touch &.no-touch
+					display: block
+
+
+		&.title
+			// margin: 0
+			// z-index: 1
+			width: 100%
+
+			.content
+				text-align: center
+				width: 1000rem
+
+				svg#logo
+					display: inline-block
+					width: 330rem
+					height: 150rem
+					path, polygon
+						fill: #fff
+				.lockup
+					position: relative
+					vertical-align: bottom
+					display: inline-block
+					text-align: left
+					height: 100rem
+					width: 670rem
+					top: 28rem
+					vertical-align: top
+					p
+						position: absolute
+						bottom: -14rem
+						display: block
+						padding: 0 0 0 55rem
+						font-size: 35rem
+						line-height: 35rem
+
+					&::before
+						position: absolute
+						left: 0
+						top: 0
+						content: " "
+						font-size: 0
+						background: #fff
+						width: 1px
+						margin: 20rem
+						height: 100%
+						transform: rotate(16deg)
+
+		&.explore
+		&.capacity
+		&.markings
+		&.details

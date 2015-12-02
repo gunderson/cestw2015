@@ -1,0 +1,77 @@
+#main
+	width: 100%
+	height: 100%
+	position: relative
+	overflow: hidden
+
+#noscript, #oldbrowsers
+	font-size: 22px
+	display: table
+	width: 100%
+	height: 100%
+	p
+		display:table-cell
+		text-align: center
+		vertical-align: middle
+		padding: 100px
+
+
+
+.sprite
+	background-url: url($cdn + "assets/images/spritesheet.png")
+
+h1 
+	font-family: "Pizza Press Inline-Fill"
+	font-weight: normal
+h1,h2,h3,p
+	opacity:0.99
+
+.at-letter
+	position: relative
+	// opacity: 0
+	// visibility: hidden
+	display: inline-block
+	h3 &
+		opacity: 1
+		visibility: visible
+
+
+.at-word
+	position: relative
+	// opacity: 0
+	// visibility: visible
+	display: inline-block
+	h1 &
+		opacity: 1
+		visibility: visible
+
+
+.vignette
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 36%, rgba(0,0,0,0.09) 56%, rgba(0,0,0,0.3) 100%) /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(36%,rgba(0,0,0,0)), color-stop(56%,rgba(0,0,0,0.09)), color-stop(100%,rgba(0,0,0,0.3))) /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 36%,rgba(0,0,0,0.09) 56%,rgba(0,0,0,0.3) 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 36%,rgba(0,0,0,0.09) 56%,rgba(0,0,0,0.3) 100%) /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 36%,rgba(0,0,0,0.09) 56%,rgba(0,0,0,0.3) 100%) /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 36%,rgba(0,0,0,0.09) 56%,rgba(0,0,0,0.3) 100%) /* W3C */
+	pointer-events: none
+	
+.vignette-top
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.5)), color-stop(100%, rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+	pointer-events: none
+	
+.vignette-bottom
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.5)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+	pointer-events: none
+

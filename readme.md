@@ -3,13 +3,15 @@ This repository contains 3 separate applictaions. Each station will run all thre
 
 ## init
 
+    $ brew install node.js
+    $ sudo gem install sass
     $ npm install
 
 ## build full project
 
     $ gulp
 
-## start watcher to build upon save
+## start watcher to build individual projects upon save
 
     $ gulp watch
 

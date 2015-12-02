@@ -1,0 +1,95 @@
+#home-page
+	.vignette
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transition: opacity 0.5s
+		&.active
+			opacity: 1
+			
+	.vignette-top
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 65%
+		opacity: 0
+		transition: opacity 0.5s
+		&.active
+			opacity: 1
+		
+	.vignette-bottom
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 65%
+		opacity: 0
+		transition: opacity 0.5s
+		&.active
+			opacity: 1
+			
+	.textbox,
+	.textbox-bottom
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		width: 80%
+		text-align: center
+		color: #000000
+		opacity: 0
+		// visibility: hidden
+		text-shadow: 0 0 16rem rgba(0, 0, 0, .5)
+
+		&.active
+			opacity: 1
+
+		h1
+			width: 100%
+			font-size: 80rem
+			margin: 10rem 0 0 0;
+			color: #FFF
+			font-weight: normal
+			line-height: 80rem
+			text-transform: uppercase
+
+		h3 
+			width: 60%
+			font-family:"Trade Gothic Cn"
+			font-weight: normal
+			text-transform: uppercase
+			font-size: 35rem
+			margin: 10rem auto 0;
+			color: #FFF
+			line-height: 35rem
+			// letter-spacing: 0.05em
+		transition: opacity 1s
+		-webkit-transition: opacity 1s
+				
+	.textbox
+		top: $edge-margin
+		.touch &
+			text-shadow: 0 0 32rem rgba(0, 0, 0, 1)
+	
+		&.text1
+			width: 500rem
+		&.text3
+		
+	.textbox-bottom
+		bottom: 150rem
+		.touch &
+			bottom: $edge-margin + 40rem
+			text-shadow: 0 0 16rem rgba(0, 0, 0, 1)
+			
+@media screen and (device-aspect-ratio: 40/71)
+	.textbox-bottom
+		bottom: 150rem
+		.touch &
+			bottom: auto
+			top: 167px
+			text-shadow: 0 0 16rem rgba(0, 0, 0, 1)

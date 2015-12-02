@@ -1,0 +1,231 @@
+$menu-link-color: #fff
+$menu-link-hover-color: #fff
+$menu-handle-size: 100rem
+$menu-transition-time: .33s
+
+
+#main-menu
+	font-family: $header-font-family
+	color: #ccc
+	z-index: 2
+	
+	position: absolute
+	top: 0
+	right: 0
+	height: 100%
+
+	button .glyf.close
+		display:none
+		.menu-open &
+				display:block
+	button .glyf.open
+		display:block
+		.menu-open &
+				display:none
+
+
+	.unloaded &
+		opacity: 0
+	
+		
+	.menu
+		display: block
+		position: absolute
+		top: 0
+		right: -$menu-width
+		width: $menu-width
+		height: 100%
+		
+		@include transition(transform $menu-transition-time $easeOutQuad)
+
+		.menu-open &
+			@include transform(translate(-$menu-width,0))
+			button .glyf.close
+				display:block
+			button .glyf.open
+				display:none
+		
+		.bg-menu
+			display: block
+			position: absolute
+			top: 0
+			left: 0 //$menu-width
+			width: $menu-width
+			height: 110%
+			background-color: $overlay-color
+
+			@include transform-origin(0 0)
+			
+		nav.menu-items
+			position: relative
+			overflow-x: hidden
+			overflow-y: auto
+			height: 100%
+			padding: 20rem
+			-webkit-overflow-scrolling: touch
+				
+		a
+			display: block
+			position: relative
+			text-transform: uppercase
+			text-decoration: none
+			font-family: "Trade Gothic Cn"
+			font-weight: bold
+			// height: 40px
+			font-size: 40rem
+			margin: 20rem
+			// padding: 10px
+			color: $menu-link-color
+			text-align: left
+			@include transition(transform 1s $easeOutQuad)
+			@include transform(translateX(100%))
+
+			@include respond-to(desktops)
+				font-size: 25rem
+			@include respond-to(laptops)
+				font-size: 25rem
+
+			
+
+			&.non-story
+				font-weight: normal
+			.menu-open &
+				@include transform(translateX(0))
+
+			.no-touch &:hover
+				color: $menu-link-hover-color
+				@include transform(translate(-5rem, -5rem))
+				@include transition(transform 0.3s $easeOutQuad)
+				&::after
+					height: 5px
+					bottom: -5px
+			&.active
+				background-color: #222 
+				color: #ddd
+			&::after
+				content: ''
+				height: 0
+				width: 100%
+				display: block
+				position: absolute
+				bottom: 0
+
+			// &:nth-child(1)
+			// 	transition-delay: (1 * 0.03s)
+			// 	&:hover
+			// 		transition-delay: 0s
+			// &:nth-child(2)
+			// 	// transition-delay: (2 * 0.03s)
+			// &:nth-child(3)
+			// 	transition-delay: (3 * 0.03s)
+			// 	&:hover
+			// 		transition-delay: 0s
+			// &:nth-child(4)
+			// 	// transition-delay: (4 * 0.03s)
+			// &:nth-child(5)
+			// 	transition-delay: (5 * 0.03s)
+			// 	&:hover
+			// 		transition-delay: 0s
+			// &:nth-child(6)
+			// 	// transition-delay: (6 * 0.03s)
+			// &:nth-child(7)
+			// 	transition-delay: (7 * 0.03s)
+			// 	&:hover
+			// 		transition-delay: 0s
+			// &:nth-child(8)
+			// 	// transition-delay: (8 * 0.03s)
+			// &:nth-child(9)
+			// 	transition-delay: (9 * 0.03s)
+			// 	&:hover
+			// 		transition-delay: 0s
+
+			
+	ul.share
+		pointer-events: all
+		position: fixed
+		right: $edge-margin
+		// height: (2 * $button-size) + (2 * $standard-margin)
+		// top: 0
+		bottom: $edge-margin
+		display: block
+		margin: 0 auto
+		padding: 0
+		font-size: 24rem
+		@include transform(translate(0.5*$menu-width,0))
+
+		.fullscreenable &, .mutable &
+			button:last-child
+				display: block
+		button
+			display: block
+			margin: $standard-margin 0
+			.menu-open &
+				visibility: visible
+				opacity: 1
+			&.hidden
+				visibility: hidden
+				width: 0
+				margin: 0
+			&:last-child
+				display: none
+
+		@include respond-to(desktops)
+			bottom: 0.5 * $edge-margin
+			right: 0.5 * $edge-margin
+			.touch &
+				bottom: 0.5 * $edge-margin
+
+		@include respond-to(laptops)
+			right: 0.5 * $edge-margin
+			bottom: 0.5 * $edge-margin
+			.touch &
+				bottom: 0.5 * $edge-margin
+		
+		@include transition(transform $menu-transition-time $easeOutQuad)
+		.menu-open &
+			@include transform(translate(0,0))
+		
+	.legal
+		font-size: 13px
+		display: block
+		margin-top: 60rem
+		padding: 20rem
+		padding-right: 150rem
+
+
+			
+	.handle
+		display: block
+		position: fixed
+
+
+		top: $edge-margin
+		right: $edge-margin
+
+		cursor: pointer
+		z-index: 1000
+		
+		@include respond-to(desktops)
+			top: (0.5 * $edge-margin)
+			right: (0.5 * $edge-margin)
+
+		@include respond-to(laptops)
+			top: (0.5 * $edge-margin)
+			right: (0.5 * $edge-margin)
+
+		.results-page &
+			display: none
+		.vote-page &
+			display: none
+		.confirmation-page &
+			display: none
+
+		// .no-touch.menu-open &:hover
+		// 	transform: translate($menu-width + 5rem, -5rem)
+		// 	-webkit-transform: translate($menu-width + 5rem, -5rem)
+		// 	color: #fff
+		
+		// .menu-open &
+		// 	transform: translate($menu-width, 0)
+		// 	-webkit-transform: translate($menu-width, 0)
+

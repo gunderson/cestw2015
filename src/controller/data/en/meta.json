@@ -1,0 +1,42 @@
+{
+	"title": "Domino's DXP",
+	"description": "The 2016 Domino’s DXP is on the road and delivering pizzas all across the country. Find out if your local store has one at DominosDXP.com/#locations",
+	"keywords": "Domino's, DXP, delivery, expert, car, custom, vehicle, new, purpose-built, pizza",
+	"author": "Domino's Pizza",
+	"copyright": "2015",
+	"viewport": "initial-scale=1.0, user-scalable=no, width=device-width",
+	"favicon": "assets/favicon.ico",
+	"url": "http://dominosdxp.com/",
+	"icons": {
+		"shortcutIcon16x16": "",
+		"shortcutIcon120x120": "",
+		"shortcutIcon200x200": "",
+		"appleTouchIcon": ""
+	},
+
+	"og": {
+		"title": "Domino's DXP",
+		"image": "assets/images/fb_share.jpg",
+		"description": "The 2016 Domino’s DXP is on the road and delivering pizzas all across the country. Find out if your local store has one at DominosDXP.com/#locations"
+	},
+	"twitter": {
+		"title": "Domino's DXP",
+		"image": "assets/images/tw_share.jpg",
+		"description": "Domino’s new pizza delivery car, actually built for pizza delivery, is here. See if your local store has one at DominosDXP.com/#locations"
+	},
+	"tumblr": {
+		"title": "Domino's DXP",
+		"image": "assets/images/fb_share.jpg",
+		"description": "Is your local Domino’s delivering oven-baked goodness in the new 2016 Domino's DXP? See for yourself at DominosDXP.com/#locations."
+	},
+	"google-plus": {
+		"title": "Domino's DXP",
+		"image": "assets/images/g+_share.jpg",
+		"description": "Is your local Domino’s delivering oven-baked goodness in the new 2016 Domino's DXP? See for yourself at DominosDXP.com/#locations."
+	},
+	"pinterest": {
+		"title": "Domino's DXP",
+		"image": "assets/images/fb_share.jpg",
+		"description": "Is your local Domino’s delivering oven-baked goodness in the new 2016 Domino's DXP? See for yourself at DominosDXP.com/#locations."
+	}
+}

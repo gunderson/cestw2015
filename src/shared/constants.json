@@ -1,0 +1,22 @@
+{
+    "dev": {
+        "site_root": "http://pgtool.local:3030/",
+        "api_root": "http://pgtool.local:3031/"
+    },
+    "stage": {
+        "site_root": "./",
+        "api_root": "../api/"
+
+    },    
+    "stage_local": {
+        "site_root": "http://pgtool.local:8888/",
+        "api_root": "http://pgtool.local:8889/"
+    },
+    "prod": {
+        "site_root": "./",
+        "api_root": "./api/"
+    },
+    "common":{
+
+    }
+}

@@ -1,0 +1,26 @@
+#section-loader
+	z-index: 10000000
+	.content
+		height: 210px
+	.loading-block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		height: 200px
+		width: 153px
+		margin: auto
+
+	h1
+		font-size: 30rem
+	.indicator
+		display:inline-block
+		width: 153px
+		height: 153px
+		background-image: url($cdn + "assets/images/pizza-loader.png")
+
+	.section-loading &
+		display: block
+	.loading &
+		display: none

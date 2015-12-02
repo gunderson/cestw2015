@@ -1,0 +1,117 @@
+.expando-button
+	$expando-depth: 5rem
+	position: relative
+	margin: 0
+	padding: 0
+	width: $button-size
+	height: $button-size
+	background-color: rgba(0,0,0,0.3)
+	color: #fff
+	text-align: center
+	border: none
+	font-size: 60rem
+	line-height: $button-size
+	transition: all 0.33s $easeOutQuad
+	cursor: pointer
+	
+
+	@include respond-to(desktops)
+		width: $button-size * 0.5
+		height: $button-size * 0.5
+		line-height: $button-size * 0.5
+		.glyf
+			line-height: $button-size * 0.5	
+	@include respond-to(laptops)
+		width: $button-size * 0.5
+		height: $button-size * 0.5
+		line-height: $button-size * 0.5
+		.glyf
+			line-height: $button-size * 0.5	
+
+
+	.glyf
+		width: 100%
+		height: 100%
+		line-height: $button-size	
+		position: absolute
+		top: 0
+		left: 0	
+	.content
+		&::before
+			content: ''
+			height: 0
+			width: 100%
+			background-color: #ccc
+			position: absolute
+			bottom: 0
+			left: 0
+			@include transform-origin(0 100%)
+			@include transform(translate(0,0) skew(-45deg, 0))
+			transition: all 0.33s $easeOutQuad
+			
+		&::after
+			content: ''
+			height: 100%
+			width: 0
+			background-color: #fff
+			position: absolute
+			top: 0
+			left: 0
+			@include transform-origin(100% 100%)
+			@include transform(translate(0, 0) skew(0, -45deg))
+			// transform: skew(0, -45deg) scaleX(-1)
+			transition: all 0.33s $easeOutQuad 
+
+	.no-touch &:hover
+		@include transform(translate($expando-depth, -$expando-depth))
+		.content
+			&::before
+				content: ''
+				height: $expando-depth
+
+				@include transform(translate(-$expando-depth,$expando-depth) skew(-45deg, 0))
+			&::after
+				content: ''
+				width: $expando-depth	
+					
+				@include transform(translate(-$expando-depth,0) skew(0, -45deg))
+				border-right: 0 solid #ccc
+		&::before
+			content: ''
+			height: 2*$expando-depth
+
+			@include transform(translate(-$expando-depth, 3*$expando-depth) skew(45deg, 0))
+		&::after
+			content: ''
+			width: 2*$expando-depth
+			@include transform(translate($expando-depth, $expando-depth) skew(0, 45deg))
+				
+
+	//shadow
+	&::before
+		//bottom
+		content: ''
+		height: 0
+		width: 100%
+		background-color: rgba(0,0,0,0.1)
+		position: absolute
+		bottom: 0
+		left: 0
+		z-index: 0
+		@include transform-origin(0 0)
+		@include transform(skew(45deg, 0))
+		transition: all 0.33s $easeOutQuad
+		
+	&::after
+		//right
+		content: ''
+		height: 100%
+		width: 0
+		background-color: rgba(0,0,0,0.1)
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 0
+		@include transform-origin(0 0)
+		@include transform(skew(0, 45deg))
+		transition: all 0.33s $easeOutQuad 

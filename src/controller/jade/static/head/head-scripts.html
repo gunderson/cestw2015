@@ -1,0 +1,39 @@
+<script>
+	function noop(){}
+	var assetWidths = [512, 720, 960, 1024, 1280, 1440, 1920];
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	if (w < h){
+		//site loaded in portrait mode, swap
+		var tmp = w;
+		w = h;
+		h = tmp;
+	}
+	var ratioSiteWidth = Math.min(w, 800);
+	var ratioSiteHeight = Math.min(h, 800);
+
+	// ONLY GET RATIO FROM WIDTH
+	var ratioPercentage = Math.min((ratioSiteHeight/800));
+	var assetSize = assetWidths.reduce(function(p,c,i,a){
+		// pick the size that's closest to the current window height
+		var pr = p / 1920; 
+		var cr = c / 1920; 
+		var dp = Math.abs(ratioPercentage - pr);
+		var dc = Math.abs(ratioPercentage - cr);
+		return (dp < dc) ? p : c;
+	}, 1920);
+
+	var assetRatio = assetSize / 1920;
+
+
+	if (!window.console || // for IE
+		(environment !== "dev" && window.location.search.indexOf("debug") === -1) // allow debugging by adding ?debug to address
+		){
+	    window.console = {
+	        log: noop,
+	        warn: noop,
+	        error: noop,
+	        trace: noop
+	    };
+	}
+</script>

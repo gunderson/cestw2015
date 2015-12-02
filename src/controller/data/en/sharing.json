@@ -1,0 +1,35 @@
+{
+	"twitter": {
+		"title": "Domins's DXP",
+		"img": "assets/images/tw_share.jpg",
+		"message": "Domino’s new pizza delivery car, actually built for pizza delivery, is here. See if your local store has one at"
+	},
+	"facebook": {
+		"title": "Domins's DXP",
+		"img": "assets/images/fb_share.jpg",
+		"message": "The 2016 Domino’s DXP is on the road and delivering pizzas all across the country. Find out if your local store has one at DominosDXP.com/#locations"
+	},
+	"googleplus": {
+		"title": "Domins's DXP",
+		"img": "assets/images/g+_share.jpg",
+		"message": "Is your local Domino’s delivering oven-baked goodness in the new 2016 Domino's DXP? See for yourself at DominosDXP.com/#locations."
+	},
+	"main_menu":{
+		"twitter": {
+			"title": "Domins's DXP",
+			"img": "assets/images/tw_share.jpg",
+			"message": "Domino’s just rolled out the ultimate pizza delivery vehicle: The 2016 Domino's DXP. Check it out at "
+		},
+		"facebook": {
+			"title": "Domins's DXP",
+			"img": "assets/images/fb_share.jpg",
+			"message": "Pizza delivery will never be the same again, thanks to Domino’s new pizza delivery vehicle. The 2016 Domino’s DXP is here. Give it a look at DominosDXP.com"
+		},
+		"googleplus": {
+			"title": "Domins's DXP",
+			"img": "assets/images/g+_share.jpg",
+			"message": "Domino’s redesigned pizza delivery from the wheels up. Check out their ultimate delivery vehicle – the 2016 Domino's DXP – at DominosDXP.com"
+		}
+		
+	}
+}

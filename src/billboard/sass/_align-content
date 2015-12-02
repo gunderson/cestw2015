@@ -1,0 +1,42 @@
+.align-content
+	.content
+		width: 100%
+		height: 100%
+		position: relative
+
+	.content.center-top
+		top: 0
+		left: -50%
+
+	.content.left-top
+		top: 0
+		left: 0
+
+	.content.right-top
+		top: 0
+		left: -100%
+
+
+	.content.center-middle
+		top: -50%
+		left: -50%
+
+	.content.left-middle
+		top: -50%
+		left: 0
+
+	.content.right-middle
+		top: -50%
+		left: -100%
+
+	.content.center-bottom
+		top: -100%
+		left: -50%
+
+	.content.left-bottom
+		top: -100%
+		left: 0
+
+	.content.right-bottom
+		top: -100%
+		left: -100%

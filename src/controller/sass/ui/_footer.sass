@@ -1,0 +1,78 @@
+footer
+	// display: none
+	.unloaded &
+		opacity: 0
+	> div
+		position: absolute
+		bottom: 0
+		vertical-align: middle
+	.left
+		left: 0
+	.center
+		margin: auto
+		text-align: center
+	.right
+		right: 0
+		text-align: right
+		max-width: $button-size + $edge-margin + $edge-margin
+
+		button.mute-button
+			display: none
+			.mutable &
+				display: block
+		button.fullscreen-button
+			display: none
+			.fullscreenable &
+				display: block
+
+		button
+			margin: $edge-margin
+			margin-top: $standard-margin
+
+			
+		
+			@include respond-to(desktops)
+				margin-top: (0.5 * $standard-margin)
+				margin: (0.5 * $edge-margin)
+
+			@include respond-to(laptops)
+				margin: (0.5 * $edge-margin)
+				margin-top: (0.5 * $standard-margin)
+
+
+			.horn
+				position: relative
+				transform: translate(0, 0)
+				transition: transform 0.5s 
+				-webkit-transition: transform 0.5s 
+			.off-shadow
+				opacity: 0
+				transform: translate(20rem, 0)
+				transition: opacity 0.5s 
+				-webkit-transition: opacity 0.5s 
+			.on-shadow
+				opacity: 1
+				transition: opacity 0.5s 
+				-webkit-transition: opacity 0.5s 
+			.wave
+				transition: opacity 0.5s 
+				-webkit-transition: opacity 0.5s 
+			.muted &
+				.horn
+					transform: translate(20rem, 0)
+				.off-shadow
+					opacity: 1
+				.on-shadow
+					opacity: 0
+				.wave
+					opacity: 0
+
+	position: absolute
+	bottom: 0
+	left: 0
+	height: 0
+	width: 100%
+	z-index: 10
+	background-color: transparent
+
+		

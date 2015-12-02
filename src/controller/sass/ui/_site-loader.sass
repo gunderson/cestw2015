@@ -1,0 +1,51 @@
+#site-loader
+	background-color: rgba(0,0,0, 0.9)
+	opacity: 0
+	transition: opacity 1s
+	z-index: -100
+	display: block
+
+	button
+		color: black
+
+	h1
+		font-size: 30rem
+
+	#loader-graphic
+		width: 300rem
+		#small-dial
+			#needle
+				// position: relative
+				transform-origin: 458.5px 123.5px
+		#big-dial
+			#needle_1_
+				// position: relative
+				transform-origin: 128.5px 128.5px
+
+
+	.loading &
+		opacity: 1
+		z-index: 10000000
+
+
+	.content
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+		text-align: center
+		&:before 
+			content: ''
+			display: inline-block
+			height: 100%
+			vertical-align: middle
+			margin-right: -0.25em
+
+		.loader-block
+			margin: auto
+			align-items: center
+			vertical-align: middle
+			justify-content: center
+			display: inline-block

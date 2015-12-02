@@ -1,0 +1,30 @@
+doctype html
+html.no-voting.unloaded
+	head
+		include _head
+		
+	body
+		noscript#noscript
+			P The Domino's DXP site requires Javascript, please enable Javascript and reload to continue.
+		#oldbrowsers
+			P The Domino's DXP site is optimized for modern browsers. Please update your browser to experience the site!
+		#main 
+			include overlays/_start-overlay
+			include overlays/_orientation-overlay
+			include overlays/_section-loader
+			include overlays/_site-loader
+			
+			include ui/_header
+			include ui/_footer
+			#pages
+				include pages/_home-page
+				include pages/_explore-page
+				include pages/_locations-page
+
+				.cover
+			include ui/_main-menu
+			include ui/_scene-menu
+
+		script(src="#{cdn}index.js")
+		noscript
+			iframe(src="//www.googletagmanager.com/ns.html?id=GTM-P6NCLH", height="0", width="0", style="display:none;visibility:hidden")

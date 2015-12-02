@@ -1,0 +1,21 @@
+section.step.results
+	.content
+		.wrapper.found
+			h1 Find a DXP:
+				span.zipcode
+			.lists
+				.with-dxp.list
+					h2 Stores with a DXP
+					ul.stores
+				.disclaimer.with-dxp Yes, these locations have a DXP. But it can travel from store to store because, you know, it's a real car. So it may not always be available to deliver your next order. Also be sure to visit #[a(href="https://www.dominos.com", target="_blank") Dominos.com] to confirm which stores can deliver to you.
+				.without-dxp.list
+					h2 There are currently no DXP's delivering for stores in your area.
+					h3.vote-msg We're giving away a DXP to one lucky Domino's store. Vote for your local store to get it and you might just see it the next time you order delivery. 
+					a.buy-pizza(href="http://dominos.com", target="_blank")
+						button.buy-pizza-button.result-button
+							| Order Domino's
+
+		.wrapper.not-found
+			.content
+				h1 Oh no!
+				h2 There are no Domino's stores in this ZIP code. Sorry.
